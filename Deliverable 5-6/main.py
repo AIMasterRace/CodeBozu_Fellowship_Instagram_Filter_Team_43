@@ -1,7 +1,7 @@
 import os
 FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 ROOT_PATH= os.getcwd()
-IMG_PATH= os.path.join(FILE_PATH, '../hippo.jpg')
+IMG_PATH= os.path.join(FILE_PATH, '../Bozu.png')
 
 #IMPORTS
 def apply_threshold(img, threshold):
@@ -71,7 +71,7 @@ def cartoonize_color(img):
     return res2
 #cv.imshow('Vintage', vintage(img))
 #cv.imshow('Sepia', sepia(img))
-#cv.imshow("Sharpened", sharpen(sepia(img)))
+cv.imshow("Sharpened", sharpen(sepia(img)))
 #cv.imshow("Cartoon Gray", cartoonize_grayscale(img))
-cv.imshow("Cartoon Color", cartoonize_color(img))
+#cv.imshow("Cartoon Color", cartoonize_color(img))
 cv.waitKey(0)
