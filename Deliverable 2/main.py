@@ -45,11 +45,11 @@ def apply_threshold(img, threshold):
         for xi in range(x):
             img[yi,xi]= 255 if gray[yi,xi]>threshold else 0
     return img
-cv.imshow("Bozu", img)
+#cv.imshow("Bozu", img)
 #cv.imshow("Horizontal Flip", horizontal_flip(img))
 #cv.imshow("Vertical Flip", vertical_flip(img))
 #cv.imshow("Contrast", contrast(img, 2))
 #cv.imshow("Bright", add_brightness(img, 90))
-#cv.imshow("Bozu in the dark", apply_threshold(img, 254.5))
-#cv.imshow('Silhouette Bozu', apply_threshold(img, 140))
+#cv.imwrite("Bozu_in_the_dark.jpg", apply_threshold(img, 254.5))
+#cv.imwrite('Silhouette_Bozu.jpg', apply_threshold(img, 50))
 cv.waitKey(0)
