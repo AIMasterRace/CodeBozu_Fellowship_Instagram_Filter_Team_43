@@ -1,7 +1,7 @@
 import os
 FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 ROOT_PATH= os.getcwd()
-IMG_PATH= os.path.join(FILE_PATH, '../Bozu.png')
+IMG_PATH= os.path.join(FILE_PATH, '../low_resdog.png')
 #IMPORTS
 
 import cv2 as cv
@@ -67,12 +67,12 @@ def scale(src, x, y):
             #print(f'{res[yi,xi]} == {src[y_index, x_index]}')
     
     return res 
-#bl= gaussian_blur(img,10,5,5)
+#bl= gaussian_blur(img,15,5,5)
 #cv.imshow('Blur', bl)
 #cv.imshow('Sharpened', sharpen(bl))
-#cv.imshow('sobelx',sobel_x(img))
+#v.imshow('sobelx',sobel_x(img))
 #cv.imshow('sobely', sobel_y(img))
 #cv.imshow('canny', canny(img))
 cv.imshow('bozu', img)
-cv.imshow('Scale', scale(img, 100, 100))
+cv.imshow('Scale', scale(img, 300, 300))
 cv.waitKey(0)
